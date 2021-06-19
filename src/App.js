@@ -1,24 +1,41 @@
-import logo from './logo.svg';
+import React from 'react';
+
+import ListCart from './components/List';
+import Navbar from './components/Navbar';
+
 import './App.css';
 
+import { useGlobalContext } from './context';
+
 function App() {
+  const {products, priceTotal, amountTotal} = useGlobalContext();
+  
+  if(products.length === 0){
+    return(
+    <main>
+      <Navbar amount={amountTotal} />
+      <section className="container">
+        <h2>YOUR BAG</h2>
+        <p style={{textAlign: 'center'}}>is currently empty</p>
+      </section>
+    </main>
+    )
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Navbar amount={amountTotal} />
+      <section className="container">
+        <h2>YOUR BAG</h2>
+        <div className="cart-container">
+          <ListCart />
+        </div>
+        <div className="row-total">
+          <h3>Total</h3>
+          <span>${priceTotal()}</span>
+        </div>
+      </section>
+    </main>
   );
 }
 
