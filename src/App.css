@@ -1,68 +1,68 @@
-.navbar{
+.navbar {
   background: brown;
 }
 
-.navbar-content{
+.navbar-content {
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin: 0 10em;
   color: white;
 }
-.row{
+.row {
   display: grid;
   grid-template-columns: 10% 1fr 5%;
   column-gap: 1em;
   align-items: center;
 }
-.row h3{
+.row h3 {
   text-transform: capitalize;
 }
-.container{
+.container {
   width: 850px;
   margin: auto;
 }
-.container h2{
+.container h2 {
   margin: 3em auto;
   text-align: center;
 }
-.cart-container{
+.cart-container {
   padding-bottom: 3em;
-  border-bottom: brown solid ;
+  border-bottom: brown solid;
 }
-img{
+img {
   width: 100%;
 }
 
-button{
+button {
   cursor: pointer;
 }
-.btn-container{
+.btn-container {
   display: grid;
   justify-content: center;
   text-align: center;
 }
-.btn{
+.btn {
   background: none;
   border: none;
   color: brown;
   font-size: 1.5em;
 }
 
-.btn-remove{
+.btn-remove {
   background: none;
-  border:none;
+  border: none;
   color: brown;
 }
-.row-total{
+.row-total {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.cart{
+.cart {
   position: relative;
 }
-.number{
+.number {
   height: 25px;
   width: 25px;
   border-radius: 50%;
@@ -70,5 +70,10 @@ button{
   color: brown;
   position: absolute;
   text-align: center;
-  top: -10px
+  top: -10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
